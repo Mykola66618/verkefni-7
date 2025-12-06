@@ -1,0 +1,208 @@
+/* --- Общие стили / General styles --- */
+body {
+  font-family: "Poppins", sans-serif; /* RU: основной шрифт сайта | EN: main site font */
+  background: linear-gradient(to left, #ff0059, #bf00ff, #008cff4f); /* RU: градиентный фон | EN: gradient background */
+  color: #f1f1f1; /* RU: цвет текста белый | EN: text color white */
+  margin: 0; /* RU: убираем отступы по умолчанию | EN: remove default margins */
+  padding: 0; /* RU: убираем внутренние отступы | EN: remove default padding */
+}
+
+/* --- Шапка / Header --- */
+header {
+  text-align: center; /* RU: центрируем текст заголовка | EN: center header text */
+  padding: 40px 0; /* RU: внутренние отступы сверху и снизу | EN: padding top and bottom */
+  background: rgba(0,0,0,0.45); /* RU: полупрозрачный черный фон | EN: semi-transparent black background */
+  backdrop-filter: blur(6px); /* RU: размытие фона за элементом | EN: blur effect on background behind element */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4); /* RU: тень | EN: shadow */
+}
+
+header h1 {
+  font-size: 48px; /* RU: размер текста заголовка | EN: heading size */
+  margin: 0; /* RU: убираем отступы | EN: remove margins */
+  letter-spacing: 2px; /* RU: межбуквенный интервал | EN: letter spacing */
+  font-weight: 700; /* RU: жирность шрифта | EN: font weight bold */
+}
+
+/* --- Навигация / Navigation --- */
+nav {
+  background: rgba(0,0,0,0.6); /* RU: полупрозрачный фон | EN: semi-transparent background */
+  padding: 10px 0; /* RU: отступы сверху и снизу | EN: padding top and bottom */
+  backdrop-filter: blur(6px); /* RU: эффект размытия | EN: blur effect */
+}
+
+nav ul {
+  list-style: none; /* RU: убираем маркеры списка | EN: remove list bullets */
+  display: flex; /* RU: горизонтальное расположение | EN: horizontal layout */
+  justify-content: center; /* RU: центрируем элементы | EN: center items */
+  gap: 30px; /* RU: расстояние между ссылками | EN: spacing between links */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #fff; /* RU: цвет текста белый | EN: white text color */
+  text-decoration: none; /* RU: убираем подчеркивание | EN: remove underline */
+  font-weight: 500; /* RU: средняя жирность | EN: medium font weight */
+  padding: 8px 14px; /* RU: внутренние отступы ссылки | EN: padding for link */
+  border-radius: 6px; /* RU: скругление углов | EN: rounded corners */
+
+}
+
+nav ul li a:hover {
+  background: rgba(255,255,255,0.18); /* RU: подсветка при наведении | EN: hover background highlight */
+
+}
+.star {
+  list-style: none;
+}
+/* --- Контейнер и сайдбар / Container & Sidebar --- */
+.container {
+  max-width: 1200px; /* RU: максимальная ширина контейнера | EN: maximum container width */
+  margin: auto; /* RU: центрируем контейнер | EN: center container horizontally */
+  padding: 20px; /* RU: внутренние отступы | EN: padding */
+  display: flex; /* RU: flex для сайдбара и контента | EN: flex layout for sidebar & main */
+  gap: 20px; /* RU: расстояние между элементами | EN: gap between items */
+  flex-wrap: wrap; /* RU: перенос элементов на новую строку при малых экранах | EN: wrap items on smaller screens */
+}
+
+.sidebar {
+  flex: 1 1 100%; /* RU: занимает всю ширину при маленьком экране | EN: full width on small screens */
+  background: rgba(0,0,0,0.555); /* RU: полупрозрачный фон | EN: semi-transparent background */
+  padding: 20px; /* RU: внутренние отступы | EN: padding */
+  border-radius: 12px; /* RU: скругление углов | EN: rounded corners */
+}
+
+/* --- Основной контент / Main content --- */
+.main-content {
+  flex: 3 1 700px; /* RU: занимает больше места, минимальная ширина 700px | EN: takes more space, min width 700px */
+}
+
+/* --- Статьи и заголовки / Articles & Headings --- */
+article {
+  background: rgba(0,0,0,0.4); /* RU: прозрачный черный фон | EN: semi-transparent black background */
+  padding: 25px; /* RU: внутренние отступы | EN: padding */
+  margin-top: 25px; /* RU: отступ сверху между статьями | EN: top margin */
+  border-radius: 14px; /* RU: скругление углов | EN: rounded corners */
+  box-shadow: 0 0 25px rgba(0,0,0,0.35); /* RU: тень | EN: shadow */
+  backdrop-filter: blur(6px); /* RU: размытие фона | EN: blur background */
+}
+
+h2 {
+  margin-top: 0; /* RU: убираем отступ сверху | EN: remove top margin */
+  font-size: 32px; /* RU: размер текста | EN: font size */
+  letter-spacing: 1px; /* RU: межбуквенный интервал | EN: letter spacing */
+  position: relative; /* RU: для ::after полоски | EN: relative for ::after line */
+}
+
+
+
+/* --- Биография / Bio --- */
+.bio-block {
+  display: flex; /* RU: горизонтально | EN: horizontal layout */
+  gap: 25px; /* RU: отступ между фото и текстом | EN: gap between photo & text */
+  flex-wrap: wrap; /* RU: перенос на следующую строку при малых экранах | EN: wrap on smaller screens */
+  align-items: center; /* RU: выравнивание по центру по вертикали | EN: vertical alignment center */
+}
+
+.artist-photo {
+  width: 320px; /* RU: ширина фото | EN: photo width */
+  border-radius: 14px; /* RU: скругление углов | EN: rounded corners */
+}
+
+/* --- Видео / Video --- */
+.video-container {
+  position: relative; /* RU: для абсолютного позиционирования видео | EN: relative for absolute video */
+  padding-bottom: 50%; /* RU: сохраняем соотношение 16:9 | EN: 16:9 aspect ratio */
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px; /* RU: скругленные углы | EN: rounded corners */
+  box-shadow: 0 0 25px rgba(0,0,0,0.5); /* RU: тень | EN: shadow */
+}
+
+.video-container video {
+  position: absolute; /* RU: абсолютное позиционирование внутри контейнера | EN: absolute positioning inside container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* --- Футер / Footer --- */
+footer {
+  background-color: rgba(0,0,0,0.671); /* RU: фон футера | EN: footer background */
+  color: #fff; /* RU: белый текст | EN: white text */
+  padding: 30px 20px; /* RU: внутренние отступы | EN: padding */
+  text-align: center; /* RU: центрирование текста | EN: center text */
+  border-top: 3px solid #ff00bf; /* RU: верхняя граница | EN: top border */
+  display: flex;
+  flex-direction: column; /* RU: колонки | EN: columns */
+  gap: 15px;
+}
+
+footer .foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* RU: центрируем блоки | EN: center blocks */
+  gap: 30px;
+}
+
+footer .foot div {
+  background-color: rgba(255,255,255,0.192); /* RU: полупрозрачный фон | EN: semi-transparent background */
+  padding: 40px; /* RU: внутренние отступы | EN: padding */
+  border-radius: 10px; /* RU: скругление углов | EN: rounded corners */
+  font-size: 16px;
+  color: #fff;
+}
+
+footer .foot div ul {
+  list-style: none; /* RU: убираем маркеры | EN: remove bullets */
+  padding: 0;
+  margin: 0;
+  text-align: center; /* RU: текст по центру | EN: center text */
+}
+
+footer .foot div ul li {
+  margin: 20px 0; /* RU: отступ между ссылками | EN: vertical spacing between links */
+}
+
+footer .foot div ul li a {
+  color: #fff; /* RU: цвет ссылок белый | EN: white link color */
+  text-decoration: none; /* RU: убираем подчеркивание | EN: remove underline */
+  display: inline-block;
+}
+
+footer .foot div ul li a:hover {
+  color: #ff7de9; /* RU: цвет при наведении | EN: hover color */
+}
+
+/* --- Медиа-запросы / Media queries --- */
+
+/* Планшеты: до 1200px / Tablets: up to 1200px */
+@media (max-width: 1200px) {
+  .bio-block { flex-direction: column; text-align: center; }
+  .artist-photo { width: 250px; }
+  nav ul { flex-direction: column; gap: 10px; align-items: center; }
+}
+
+/* Малые ПК: до 900px / Small PCs: up to 900px */
+@media (max-width: 900px) {
+  header h1 { font-size: 36px; }
+  .sidebar { flex: 1 1 100%; margin-bottom: 20px; }
+  .main-content { flex: 1 1 100%; }
+  footer .foot div { width: 100%; padding: 15px 10px; font-size: 13px; }
+  footer p { font-size: 12px; }
+}
+
+/* Телефоны: до 480px / Phones: up to 480px */
+@media (max-width: 480px) {
+  header h1 { font-size: 24px; }
+  nav ul { flex-direction: column; gap: 5px; }
+  .artist-photo { width: 200px; }
+  h2 { font-size: 26px; }
+  footer .foot div { width: 100%; padding: 15px 10px; font-size: 13px; }
+  footer p { font-size: 12px; }
+}
+/* КОМЕНТАРИИ БЫЛИ СОЗДАНЫ  С ПОМОШЬЮ gpt ПОТОМУ ЧТО ДЛЯ КАЖДОГО ДЕЙТВИЯ ДЕЛАТЬ КОМЕНТАРИ ТРУДНО И ДОЛГО */
+/* ATHUGASEMDIR VORU BÚNAR TIL MEÐ GPT VEGNA ÞESS AÐ GERA ATHUGASEMDIR VIÐ HVERJA AÐGERÐ ER ERFITT OG TÍMAFREKT */
